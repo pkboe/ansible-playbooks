@@ -1,0 +1,8 @@
+- hosts: poc
+  gather_facts: yes
+  tasks:
+    - name: Ping
+      ping:
+      register: ping_result
+    - debug:
+        var: ping_result
